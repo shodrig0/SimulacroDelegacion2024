@@ -100,6 +100,8 @@ class Empresa
     // si cumple con diferente a nulo y si la activa se cumple y el estado del cliente está activo, entra
     // crea una instancia, con el null como valor entero, la fecha para poder restar con el año actual
     // objCliente es el cliente que realiza, colCodigosMoto como los codigos de la moto
+    // mejor opcion usar un while por cuestiones de rendimiento, pero tenia problemas de compilación y decidí por el foreach
+    // para salir del paso
     public function registrarVenta($colCodigosMoto, $objCliente)
     {
         $impFinal = 0;
