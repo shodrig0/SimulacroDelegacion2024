@@ -95,31 +95,26 @@ class Empresa
         return $motoEnLista;
     }
 
-    // registro una venta y lo incluyo en un array de ventas
-    // creo una instancia adentro de las condiciones:
-    // si cumple con diferente a nulo y si la activa se cumple y el estado del cliente está activo, entra
-    // crea una instancia, con el null como valor entero, la fecha para poder restar con el año actual
-    // objCliente es el cliente que realiza, colCodigosMoto como los codigos de la moto
-    // mejor opcion usar un while por cuestiones de rendimiento, pero tenia problemas de compilación y decidí por el foreach
-    // para salir del paso
     public function registrarVenta($colCodigosMoto, $objCliente)
     {
         $impFinal = 0;
+        $venta = null; // bandera de nulo
         foreach ($colCodigosMoto as $codigoMoto) {
             $objMotoCod = $this->retornarMoto($codigoMoto);
             if ($objMotoCod !== null && $objMotoCod->getActiva() && $objCliente->getEstado()) {
-                $venta = new Venta(null, date('Y-m-d'), $objCliente, $objMotoCod, $objMotoCod->darPrecioVenta());
+                if ($venta === null) { // acá agrego!! si es igual a null que cree
+                    $venta = new Venta(null, date('Y-m-d'), $objCliente, $objMotoCod, $objMotoCod->darPrecioVenta());
+                }
                 $this->objVentas[] = $venta;
                 $impFinal += $objMotoCod->darPrecioVenta();
             }
         }
-        // modifico array
-        $this->setObjVentas($this->getObjVentas());
-
+        // modifico el array solo si hay una venta
+        if ($venta !== null) {
+            $this->setObjVentas($this->getObjVentas());
+        }
         return $impFinal;
     }
-
-
 
     public function retornarVentasXCliente($tipo, $numDoc)
     {

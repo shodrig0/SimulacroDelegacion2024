@@ -89,8 +89,8 @@ class Cliente
         }
 
         $msj = "\nNombre y Apellido: " . $this->getNombre() . " " . $this->getApellido() . "\n";
-        $msj .= "Estado: " . $this->getEstado() . "\n";
-        $msj .= "Tipo de Documentación: " . $estado . "\n";
+        $msj .= "Estado: " . $estado . "\n";
+        $msj .= "Tipo de Documentación: " . $this->getTipo() . "\n";
         $msj .= "Número de Documento: " . $this->getNroDoc() . "\n";
 
         return $msj;
