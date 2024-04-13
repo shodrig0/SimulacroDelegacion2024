@@ -26,8 +26,6 @@ class Cliente
     public function setNombre($nombreC)
     {
         $this->nombre = $nombreC;
-
-        return $this;
     }
 
     public function getApellido()
@@ -38,8 +36,6 @@ class Cliente
     public function setApellido($apellidoC)
     {
         $this->apellido = $apellidoC;
-
-        return $this;
     }
 
     public function getEstado()
@@ -50,8 +46,6 @@ class Cliente
     public function setEstado($estadoC)
     {
         $this->estado = $estadoC;
-
-        return $this;
     }
 
     public function getTipo()
@@ -62,8 +56,6 @@ class Cliente
     public function setTipo($tipoC)
     {
         $this->tipo = $tipoC;
-
-        return $this;
     }
 
     public function getNroDoc()
@@ -74,8 +66,6 @@ class Cliente
     public function setNroDoc($nroDocC)
     {
         $this->nroDoc = $nroDocC;
-
-        return $this;
     }
 
     public function __toString()

@@ -31,8 +31,6 @@ class Venta
     public function setNro($nro)
     {
         $this->nro = $nro;
-
-        return $this;
     }
 
     /**
@@ -46,8 +44,6 @@ class Venta
     public function setFecha($fecha)
     {
         $this->fecha = $fecha;
-
-        return $this;
     }
 
     /**
@@ -61,8 +57,6 @@ class Venta
     public function setColCliente($colCliente)
     {
         $this->colCliente = $colCliente;
-
-        return $this;
     }
 
     /**
@@ -76,8 +70,6 @@ class Venta
     public function setColMoto($colMoto)
     {
         $this->colMoto = $colMoto;
-
-        return $this;
     }
 
     /**
@@ -91,8 +83,6 @@ class Venta
     public function setPrecioFinal($precioFinal)
     {
         $this->precioFinal = $precioFinal;
-
-        return $this;
     }
 
     // para sumar moto

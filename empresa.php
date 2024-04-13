@@ -27,8 +27,6 @@ class Empresa
     public function setDenominacion($denominacion)
     {
         $this->denominacion = $denominacion;
-
-        return $this;
     }
 
     public function getDireccion()
@@ -39,8 +37,6 @@ class Empresa
     public function setDireccion($direccion)
     {
         $this->direccion = $direccion;
-
-        return $this;
     }
 
     public function getColCliente()
@@ -51,8 +47,6 @@ class Empresa
     public function setColCliente($colCliente)
     {
         $this->colCliente = $colCliente;
-
-        return $this;
     }
 
     public function getColMoto()
@@ -63,8 +57,6 @@ class Empresa
     public function setColMoto($colMoto)
     {
         $this->colMoto = $colMoto;
-
-        return $this;
     }
 
     public function getObjVentas()
@@ -75,8 +67,6 @@ class Empresa
     public function setObjVentas($objVentas)
     {
         $this->objVentas = $objVentas;
-
-        return $this;
     }
 
     // retorno un objeto
