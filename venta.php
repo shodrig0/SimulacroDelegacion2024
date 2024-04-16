@@ -89,9 +89,10 @@ class Venta
     public function incorporarMoto($objMoto)
     {
         if ($objMoto->getActiva()) {
-            if ($objMoto->darPrecioVenta() >= 0) {
+            if ($objMoto->darPrecioVenta() > 0) {
                 $this->getColMoto()[] = $objMoto;
-                $this->setPrecioFinal($objMoto->getCosto() + $this->getPrecioFinal());
+                $suma = $objMoto->getCosto() + $this->getPrecioFinal();
+                $this->setPrecioFinal($suma);
             }
         }
     }
